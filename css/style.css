@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    background: #FFFFFF;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+#carousel{
+    position: relative;
+    width: 1200px;
+    margin: auto;
+    margin-top: 2%;
+}
+
+#carousel img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* BOTÕES */
+
+#esquerda,
+#direita{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+
+    background: rgba(255,255,255,0.12);
+
+    backdrop-filter: blur(10px);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+
+    z-index: 10;
+    
+}
+
+/* POSIÇÃO */
+
+#esquerda{
+    left: 20px;
+    
+}
+#direita{
+    right: 20px;
+    
+}
+
+/* HOVER */
+
+#esquerda:hover,
+#direita:hover{
+
+    background: rgba(255,255,255,0.25);
+
+    transform:
+        translateY(-50%)
+        scale(1.1);
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,0.4);
+        
+}
+
+/* CLIQUE */
+
+#esquerda:active,
+#direita:active{
+
+    transform:
+        translateY(-50%)
+        scale(0.95);
+}
+
+#esquerda,
+#direita{
+    opacity: 0;
+}
+
+#carousel:hover #esquerda,
+#carousel:hover #direita{
+    opacity: 1;
+}
+#carousel-dots{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.dot{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+
+    transition:
+        background-color 0.4s ease,
+        transform 0.4s ease,
+        opacity 0.4s ease;
+
+    opacity: 0.5;
+}
+
+.dot.active{
+    background-color: rgb(71, 68, 250);
+    transform: scale(1.4);
+    opacity: 1;
+}
+
+div#carousel-title a {
+    text-decoration: none;
+    color: black;
+}
+
+div#carousel-title  {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+header ul {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+ul {
+	display: inline-block;
+}
+
+header {
+    background: #FFFFFF;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+header div {
+    display: inline;
+    vertical-align: middle;
+}
+
+header nav {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80vw;
+}
+
+header nav a {
+    color: #1351d8;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 900;
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+header nav a:hover {
+    color: #1b357e;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+nav li {
+    display: inline;
+    list-style: none;
+}
+
+main {
+    min-height: calc(100% - 167px);
+}
+
+nav#social {
+    display: inline;
+    width: 80%;
+}
+
+nav#social ul img {
+    width: 28px;
+}
+
+span.redesociais {
+    color: #ffffff;
+    vertical-align: super;
+}
+
+footer {
+    background: #1B357E;
+    padding: 20px;
+}
+
+footer div {
+    display: inline;
+    float: right;
+    margin-right: 40px;
+}
+
+button:hover {
+    background: #1b357e;
+}
+button {
+    background: #1351d8;
+    color: #fff;
+    border: 0px;
+    border-radius: 10px;
+}

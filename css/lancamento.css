@@ -1,0 +1,435 @@
+/*
+   LISTA DE CARROS
+*/
+
+ul.modelcars{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    flex-wrap: wrap;
+
+    gap: 40px;
+
+    margin: 60px auto;
+
+    padding: 0 30px;
+}
+
+/* 
+   CARD DO CARRO
+*/
+
+ul.modelcars li{
+
+    list-style: none;
+
+    width: 340px;
+
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #f7f9ff
+    );
+
+    border-radius: 28px;
+
+    padding: 22px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        border 0.45s ease;
+
+    border: 1px solid rgba(19,81,216,0.08);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* HOVER */
+
+ul.modelcars li:hover{
+
+    transform:
+        translateY(-12px)
+        scale(1.01);
+
+    box-shadow:
+        0 25px 50px rgba(0,0,0,0.18);
+}
+
+/* 
+   IMAGEM
+*/
+
+img.photocar{
+
+    display: block;
+
+    width: 100%;
+
+    border-radius: 22px;
+
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+ul.modelcars li:hover img.photocar{
+
+    transform: scale(1.06);
+
+    filter: brightness(1.04);
+}
+
+/* 
+   CHECKBOX
+*/
+
+.checkbox{
+
+    width: 24px;
+
+    height: 24px;
+
+    cursor: pointer;
+
+    accent-color: #1351d8;
+}
+
+/* 
+   CONTAINER INFO
+*/
+
+.infocar{
+
+    margin-top: 22px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 14px;
+}
+
+.info{
+
+    width: 100%;
+}
+
+/* 
+   MODELO
+*/
+
+.textmodel{
+
+    display: block;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    line-height: 1.3;
+
+    color: #1351d8;
+
+    margin-bottom: 10px;
+}
+
+/* 
+   PREÇO
+*/
+
+.textprice{
+
+    display: block;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    color: #333;
+}
+
+/* 
+   TABELA COMPARAÇÃO
+*/
+
+table{
+
+    border-collapse: collapse;
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    color: #222;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+}
+
+th,
+td{
+
+    text-align: center;
+
+    padding: 18px;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+td:nth-child(1){
+
+    font-weight: 800;
+
+    width: 35%;
+
+    text-align: left;
+
+    color: #1351d8;
+
+    background: rgba(19,81,216,0.05);
+}
+
+tr{
+
+    transition: background 0.3s ease;
+}
+
+tr:nth-child(even){
+
+    background-color: #f7f9fc;
+}
+
+tr:hover{
+
+    background:
+        rgba(19,81,216,0.08);
+}
+
+/* 
+   MODAL COMPARAÇÃO
+*/
+
+div#compare{
+
+    position: fixed;
+
+    z-index: 999;
+
+    width: 78vw;
+
+    max-width: 1200px;
+
+    min-width: 320px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background:
+        rgba(255,255,255,0.96);
+
+    backdrop-filter: blur(14px);
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 32px;
+
+    padding: 35px;
+
+    display: none;
+
+    border:
+        1px solid rgba(255,255,255,0.4);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.25);
+}
+
+/* 
+   IMAGEM COMPARAÇÃO
+*/
+
+.compare-car-image{
+
+    width: 230px;
+
+    border-radius: 20px;
+
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.15);
+}
+
+.compare-car-image:hover{
+
+    transform:
+        scale(1.06);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.22);
+}
+
+/* 
+   BOTÃO FECHAR
+*/
+
+.close-button{
+
+    background:
+        linear-gradient(
+            135deg,
+            #1351d8,
+            #0d3ea8
+        );
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 28px;
+
+    border-radius: 16px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        opacity 0.3s ease;
+
+    box-shadow:
+        0 10px 25px rgba(19,81,216,0.35);
+}
+
+.close-button:hover{
+
+    transform:
+        translateY(-3px)
+        scale(1.03);
+
+    box-shadow:
+        0 18px 35px rgba(19,81,216,0.4);
+}
+
+/* 
+   BOTÃO COMPARAR
+*/
+
+button{
+
+    background:
+        linear-gradient(
+            135deg,
+            #1351d8,
+            #0d3ea8
+        );
+
+    color: white;
+
+    border: none;
+
+    border-radius: 18px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    box-shadow:
+        0 12px 30px rgba(19,81,216,0.28);
+}
+
+button:hover{
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 18px 35px rgba(19,81,216,0.4);
+}
+
+/* 
+   RESPONSIVO
+*/
+
+@media(max-width: 768px){
+
+    ul.modelcars{
+
+        gap: 24px;
+
+        padding: 0 16px;
+    }
+
+    ul.modelcars li{
+
+        width: 100%;
+    }
+
+    div#compare{
+
+        width: 96vw;
+
+        padding: 18px;
+
+        border-radius: 22px;
+    }
+
+    .compare-car-image{
+
+        width: 150px;
+    }
+
+    td,
+    th{
+
+        font-size: 14px;
+
+        padding: 10px;
+    }
+
+    .textmodel{
+
+        font-size: 20px;
+    }
+
+    .textprice{
+
+        font-size: 17px;
+    }
+}
