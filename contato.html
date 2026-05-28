@@ -49,14 +49,22 @@
                     <option>RECLAMAÇÃO</option>
                 </select>
                 <textarea name="mensagem" id="mensagem" class="fordform" placeholder="Mensagem"></textarea>
-                <div>
+                <div class="checkdiv">
                     <p>Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. A
-qualquer momento, será possível editar ou remover tais dados.</p>
-                    <input type="checkbox" name="termos" id="termos">
-                    <p>Sim. Li e concordo com os Termos e Condições.</p>
+qualquer momento, será possível editar ou remover tais dados.</p><a href="">Termos e Condições</a>
+                    <div class="divcheck">       
 
-                    <input type="checkbox" name="novidades" id="novidades">
-                    <p>Sim. Também quero receber descontos e novidades.</p>
+                        <label>
+                            <input type="checkbox" name="termos" id="termos" required>
+                            Sim. Li e concordo com os Termos e Condições.
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="novidades" id="novidades">
+                            Sim. Também quero receber descontos e novidades.
+                        </label>
+
+                    </div>
                 </div>
             <button type="submit" name="enviar">Enviar</button>
             </form>

@@ -1,57 +1,138 @@
-.fordform {
-    display: block;
-    width: 300px;
-    border: 1px solid #cccccc;
-    border-radius: 10px;
-    height: 26px;
-    margin: 8px;
-    font-size: 13px;
-    padding: 5px;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
 }
 
-select.fordform {
-    width: 310px;
-    height: 36px;
-    color: #807d7d;
+/* CONTAINER PRINCIPAL */
+.forms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    min-height: 80vh;
+    padding: 40px 20px;
 }
 
-input:focus-visible {
-    outline: none;
+/* CARD DO FORMULÁRIO */
+.forms form{
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 360px;
 }
 
-select:focus-visible {
-    outline: none;
+/* IMAGEM */
+.forms img{
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    max-width: 420px;
+    width: 100%;
 }
 
-main div {
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.forms {
-    display: block;
+/* TÍTULO */
+h2{
     text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #003478;
 }
 
-h2 {
-    text-align: left;
-    font-weight: 800;
+/* INPUTS */
+.fordform{
+    width: 100%;
+    border: 1px solid #d4d4d4;
+    border-radius: 10px;
+    height: 45px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    padding: 10px;
+    transition: 0.3s;
+    background: #fafafa;
 }
 
-
-button {
-    width: 200px;
-    height: 40px;
-    margin-right: 8px;
-    float: right;
+.fordform:focus{
+    border-color: #003478;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,52,120,0.15);
+    outline: none;
 }
 
-.titulo {
-    margin-left: 8px;
-}
+/* TEXTAREA */
 #mensagem{
-    height: 100px;
+    height: 120px;
+    resize: none;
+}
+
+/* CHECKBOX */
+.checkdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.divcheck{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* BOTÃO */
+button{
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    background: #003478;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+button:hover{
+    background: #0050b3;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVO */
+@media(max-width: 900px){
+
+    .forms{
+        flex-direction: column;
+    }
+
+    .forms img{
+        max-width: 350px;
+    }
+
+    .forms form{
+        width: 90%;
+    }
+}
+.divcheck{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* CADA LINHA DO CHECKBOX */
+.divcheck label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    font-size: 14px;
 }
