@@ -1,6 +1,5 @@
 
-
-.forms{
+.forms {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,10 +7,11 @@
     flex-wrap: wrap;
     min-height: 80vh;
     padding: 40px 20px;
+    font-family: sans-serif;
 }
 
 
-.forms form{
+.forms form {
     background: white;
     padding: 35px;
     border-radius: 18px;
@@ -22,16 +22,14 @@
     width: 360px;
 }
 
-
-.forms img{
+.forms img {
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     max-width: 420px;
     width: 100%;
 }
 
-
-h2{
+h2.titulo {
     text-align: center;
     margin-bottom: 20px;
     font-size: 28px;
@@ -39,7 +37,7 @@ h2{
 }
 
 
-.fordform{
+.fordform {
     width: 100%;
     border: 1px solid #d4d4d4;
     border-radius: 10px;
@@ -49,86 +47,106 @@ h2{
     padding: 10px;
     transition: 0.3s;
     background: #fafafa;
+    box-sizing: border-box; 
 }
 
-.fordform:focus{
+select.fordform:invalid {
+    color: #999;
+}
+
+
+.fordform:required {
+    border-right: 4px solid #003478; 
+}
+
+
+.fordform:required:valid {
+    border-color: #2ecc71;
+    background: #f0fff4;
+}
+
+.fordform:focus {
     border-color: #003478;
     background: white;
     box-shadow: 0 0 10px rgba(0,52,120,0.15);
     outline: none;
 }
 
-/* TEXTAREA */
-#mensagem{
+#mensagem {
     height: 120px;
     resize: none;
 }
 
 
-.checkdiv{
+.checkdiv p {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.checkdiv a {
+    font-size: 12px;
+    color: #003478;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.divcheck {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 10px;
+    gap: 12px;
     width: 100%;
 }
 
-.divcheck{
+.divcheck label {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 10px;
-    margin-top: 15px;
+    font-size: 13px;
+    color: #444;
+    cursor: pointer;
 }
 
 
-button{
+
+button {
     width: 100%;
     height: 45px;
     border: none;
     border-radius: 10px;
-    background: #003478;
-    color: white;
     font-size: 16px;
     font-weight: bold;
-    cursor: pointer;
     margin-top: 20px;
-    transition: 0.3s;
+    transition: 0.4s;
+    
+   
+    background-color: #ccc; 
+    color: #888;
+    cursor: not-allowed;
+    pointer-events: none; 
 }
 
-button:hover{
+
+form:valid button {
+    background-color: #003478;
+    color: white;
+    cursor: pointer;
+    pointer-events: auto; 
+    box-shadow: 0 5px 15px rgba(0, 52, 120, 0.2);
+}
+
+form:valid button:hover {
     background: #0050b3;
     transform: translateY(-2px);
 }
 
 
-@media(max-width: 900px){
-
-    .forms{
-        flex-direction: column;
-    }
-
-    .forms img{
-        max-width: 350px;
-    }
-
-    .forms form{
-        width: 90%;
-    }
-}
-.divcheck{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 15px;
-    width: 100%;
-}
-
-
-.divcheck label{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: center;
-    font-size: 14px;
+@media(max-width: 900px) {
+    .forms { flex-direction: column; }
+    .forms img { max-width: 350px; }
+    .forms form { width: 90%; }
 }
