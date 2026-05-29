@@ -1,9 +1,5 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f5f5f5;
-}
 
-/* CONTAINER PRINCIPAL */
+
 .forms{
     display: flex;
     justify-content: center;
@@ -14,7 +10,7 @@ body{
     padding: 40px 20px;
 }
 
-/* CARD DO FORMULÁRIO */
+
 .forms form{
     background: white;
     padding: 35px;
@@ -26,7 +22,7 @@ body{
     width: 360px;
 }
 
-/* IMAGEM */
+
 .forms img{
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
@@ -34,7 +30,7 @@ body{
     width: 100%;
 }
 
-/* TÍTULO */
+
 h2{
     text-align: center;
     margin-bottom: 20px;
@@ -42,7 +38,7 @@ h2{
     color: #003478;
 }
 
-/* INPUTS */
+
 .fordform{
     width: 100%;
     border: 1px solid #d4d4d4;
@@ -68,7 +64,7 @@ h2{
     resize: none;
 }
 
-/* CHECKBOX */
+
 .checkdiv{
     display: flex;
     flex-direction: column;
@@ -85,7 +81,7 @@ h2{
     margin-top: 15px;
 }
 
-/* BOTÃO */
+
 button{
     width: 100%;
     height: 45px;
@@ -105,7 +101,7 @@ button:hover{
     transform: translateY(-2px);
 }
 
-/* RESPONSIVO */
+
 @media(max-width: 900px){
 
     .forms{
@@ -128,7 +124,7 @@ button:hover{
     width: 100%;
 }
 
-/* CADA LINHA DO CHECKBOX */
+
 .divcheck label{
     display: flex;
     align-items: center;
